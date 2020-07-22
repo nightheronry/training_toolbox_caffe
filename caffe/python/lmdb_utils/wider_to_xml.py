@@ -125,7 +125,9 @@ def main():
         image_name_out = image_name_out[:-4] + ".png"
 
         print((image_path, image_name, image_name_out))
-
+        if bbox_num is 0:
+           idx += 1
+           continue
         bboxes = []
         for obj_idx in range(bbox_num):
             attr = lines[idx].split()
