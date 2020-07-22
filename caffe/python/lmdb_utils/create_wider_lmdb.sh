@@ -16,7 +16,7 @@ width=0
 height=0
 
 extra_cmd="--encode-type=jpg --encoded"
-if $redo
+if [ $redo ]
 then
   extra_cmd="$extra_cmd --redo"
 fi
