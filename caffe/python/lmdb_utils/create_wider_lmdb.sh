@@ -3,7 +3,7 @@ root_dir=$cur_dir/../..
 
 cd $root_dir
 
-redo=1
+redo=0 # True:1
 data_root_dir="/data"
 dataset_name="wider"
 mapfile="$root_dir/python/lmdb_utils/labelmap_wider.prototxt"
@@ -16,7 +16,7 @@ width=0
 height=0
 
 extra_cmd="--encode-type=jpg --encoded"
-if [ $redo ]
+if [ $redo -eq 1 ]
 then
   extra_cmd="$extra_cmd --redo"
 fi
